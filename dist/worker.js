@@ -5,11 +5,12 @@ function errorResp(msg) {
 }
 
 function checkUrl(url) {
+  const u = new URL(url)
   if (
-    url.endsWith(".jpg") ||
-    url.endsWith(".png") ||
-    url.endsWith(".gif") ||
-    url.endsWith(".jpeg")
+    u.pathname.endsWith(".jpg") ||
+    u.pathname.endsWith(".png") ||
+    u.pathname.endsWith(".gif") ||
+    u.pathname.endsWith(".jpeg")
   ) {
     return true;
   }
